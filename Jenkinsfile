@@ -9,5 +9,6 @@ node {
     // Clones the repository from the current branch name
     checkout scm
     sh 'ls'
+    docker.build("cypress:${env.BUILD_ID}")
   }
 }       
